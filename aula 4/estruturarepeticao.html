@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de repetição</title>
+</head>
+<body>
+    <script>
+        let nomes = ["Gabriel", "Suelen", "Maria", "Olívia"]
+        let count = 0
+        let leng = nomes.length
+
+        while (count < leng) {
+            console.log("Seja bem vindo " + nomes[count])
+            count ++
+        }
+
+        let count1 = 5
+        // Ele executa primeiro o código depois ver se a condição é verdadeira
+        do {
+            console.log("Valor de count no do while: " + count1)
+            count1 ++
+        }
+        while(count1 <= 10)
+
+        let senha
+
+        do {
+            senha = prompt("Digite a sua senha: ")
+        } while (senha != "chocolate")
+        console.log(senha)
+
+        let numero = 5
+        // inicialização, condição e adiciona mais um ao i
+        for(let i; i<= numero; i++) {
+            console.log("É " + i)
+        }
+    </script>
+</body>
+</html>
