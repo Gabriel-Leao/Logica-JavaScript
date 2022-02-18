@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ex005</title>
+    <title>Funções de alta ordem</title>
 </head>
 <body>
     <script>
-        // for in
-        let arr = ["A","B","C","Gabriel"]
+        const soma = (a, b) => a + b
+        const subtrair = (a, b) => a - b
+        const multiplicar = (a, b) => a * b
+        const dividir = (a, b) => b > 0 ? a / b : NaN
 
-        // O for in percore o índice
-        for (let i in arr) {
-            console.log(i)
+        // 1 - Uma função que recebe a outra como parâmetro
+        const calcular = (operacao, a, b) => operacao(a, b)
+        console.log(calcular(soma, 2, 4))
+
+        // 2 - Uma função que retorna outra função
+        const media = (a, b) => {
+            // calcular (operacao, a = resultado soma, b = 2)
+            return calcular(dividir, soma(a, b), 2)
         }
 
-        // Mostra o que tá dentro do indice
-        for (let i of arr) {
-            console.log(i)
-        }
+        
     </script>
 </body>
 </html>
