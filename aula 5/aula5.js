@@ -1,4 +1,4 @@
-const soma = (a, b) => a + b
+/*const soma = (a, b) => a + b
 const subtrair = (a, b) => a - b
 const multiplicar = (a, b) => a * b
 const dividir = (a, b) => b > 0 ? a / b : NaN
@@ -11,4 +11,21 @@ console.log(calcular(soma, 2, 4))
 const media = (a, b) => {
     // calcular (operacao, a = resultado soma, b = 2)
     return calcular(dividir, soma(a, b), 2)
+}*/
+
+// Implemetação iterativa
+function mostra__string(string) {
+    for(let char of string)
+    console.log(char)
 }
+mostra__string("Leão")
+
+// Implementação recursiva
+function mostra__string_rec(string) {
+    if(string == ""){
+        return;
+    }
+    console.log(string[0], string)
+    mostra__string_rec(string.substring(1))
+}
+mostra__string_rec("Gabriel")
