@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6</title>
+</head>
+<body>
+    <script>
+        let dados = fetch('./teste.json').then(response => response.json()).then(data => { dados = data; console.log(dados)})
+        
+        let palavras = [{palvras: "python"}, {"palavra": "javascript"},  {"palavra": "linux"}, {"palavra": "beatles"}]
+        console.log(palavras)
+        // retorna array com o indice e o valor uma mistura de keys com values
+        for (let entry of palavras.entries()) {
+            console.log(entry)
+        }
+        // entrie destruturizado
+        for (let [indice, valor] of palavras.entries()) {
+            console.log(indice, valor)
+        }
+        // retorna as chaves dentro do array
+        for (let keys of palavras.keys()) {
+            console.log(keys)
+        }
+        // retorna o valor dentro do array
+        for (let values of palavras.values()) {
+            console.log(values)
+        }
+
+        let numeros = [14,23,98,8,5,1,2,900,47,3]
+        // sintax do sort, a-b == do maior para o menor, e b-a== do maior para o menor
+        console.log(numeros.sort((a, b) => a - b))
+        console.log(numeros.sort((a, b) => b - a))
+
+        console.log(palavras.find((obj, index, arrayObjs) => {
+            console.log(obj, index, arrayObjs)
+            return obj === "beatles"
+        }))
+
+        const teste1= palavras.forEach(((obj, index, arrayObjs) => {
+            console.log(obj, index, arrayObjs)
+        }))
+
+        const mapeamento = palavras.map((obj, index, arrayObjs) => {
+            return obj.palavras
+        })
+        console.log(mapeamento)
+
+        palavras.filter((obj, index, arrayObjs) => obj.palvras)
+    </script>
+</body>
+</html>
