@@ -22,3 +22,5 @@ console.log(valorSomado)
 // os dois junto vão multiplicar os precos dos produtos em 5 e depois soma-los retonando o total da soma
 const totalEmReais = produtos.map(obj => obj.preco * 5).reduce((a, b) => a + b, 0)
 console.log(totalEmReais)
+
+const menor = produtos.filter((produto) => produto.preco <= 200)
