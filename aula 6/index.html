@@ -33,9 +33,12 @@
         // sintax do sort, a-b == do maior para o menor, e b-a== do maior para o menor
         console.log(numeros.sort((a, b) => a - b))
         console.log(numeros.sort((a, b) => b - a))
-         
-         const foundJava = palavras.find((palavra) => palavra == "java")
-         console.log(foundJava)
+        //  ele procura o valor até encontrar dentro do array. no exemplo ele vai printar os itens até encontrar a palavra java, deixando o php de fora
+         const foundJava = palavras.find((palavra, index) => {
+             console.log(palavra, index)
+             return palavra == "java"
+         })
+         console.log(`Achei a palavra ${foundJava}`)
         // index é a posição no array, obj o valor e arrayObjs é o array por completo. A ordem pode ser mudada. Essa é a estrutura padrão de funções de alta ordem de array
         const teste1= palavras.forEach(((obj, index, arrayObjs) => {
             console.log(index, obj, arrayObjs)
