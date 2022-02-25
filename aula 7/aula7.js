@@ -14,3 +14,6 @@ function func1(param1, param2) {
 
 const func2 = func1.bind(null, 'param1Fixo')
 func2('param2')
+// O método call invoca uma função com um dado valor this  e argumentos passados individualmente.
+const resultCall = somar1.call(null, 4, 5);
+console.log(resultCall);
