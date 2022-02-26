@@ -44,11 +44,18 @@
 
         function fatorial(n) {
             f = 1
-            for (let i = 0; i<=n; i++) {
+            for (let i = 1; i<=n; i++) {
                 f = f * i
             }
             return f
         }
+
+        function fatorial_rec(n) {
+            if (n==1) return 1;
+            return n * fatorial(n-1);
+        }
+
+        console.log(fatorial_rec(5))
     </script>
 </body>
 </html>
