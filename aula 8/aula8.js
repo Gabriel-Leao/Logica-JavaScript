@@ -10,7 +10,7 @@ const array1 = [5,6,7,8,9]
 const array2 = [...array, ...array1]
 console.log(array2)
 // Olhe a estrutura do min
-console.log(Math.min(...array2))
+console.log(`Esse é o menor número do array2: ${Math.min(...array2)}`)
 
 function min(...values) {
     let minNumber = values[0]
@@ -19,9 +19,30 @@ function min(...values) {
             minNumber = values[i]
         }
     }
+    return minNumber
 }
 
-console.log(min(1,2,3,4))
+const humano_leticia = {
+    nome: "Letícia Pardini",
+    idade: 26,
+    peso: 60,
+    altura: 1.625,
+    bomHumor: true,
+    nacionalidade: "brasileira",
+    naturalidade: "sul-matogrossense",
+}
+console.log(humano_leticia)
+
+const nova_leticia = {
+    xp: 900,
+    ...humano_leticia,
+    // para sobreescrever o spread operator é preciso passar o que deseja modificar depois do spread operator
+    nome: "Letícia Pardini Figueredo",
+};
+console.log(nova_leticia);
+
+console.log(`Essa é a função min criada por mim, ela retorna o menor número no array. No caso: ${min(2,3,1,24)}`)
+
 // Concatena tudo em um array só
 const array3 = [0, ...array1, 10]
 console.log(array3)

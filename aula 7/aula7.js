@@ -1,7 +1,16 @@
 console.log(this)
+console.log(innerHeight)
+console.log(document)
+
+const gabriel = {
+    nome: "Gabriel Leão da Silva",
+    altura: 178,
+    peso: 80,
+    idade: 18
+}
 
 const somar = function(n1, n2) {return n1 + n2}
-// O Bind por sua vez retorna uma nova função. O seu primeiro parâmetro continua recebe o valor que será atribuído ao this e os demais argumentos serão os parâmetros que definirão os valores atribuídos da primeira função. no caso 1 enquanto o outro valor não foi defenido
+// O Bind por sua vez retorna uma nova função. O seu primeiro parâmetro continua recebe o valor que será atribuído ao this e os demais argumentos serão os parâmetros que definirão os valores atribuídos da primeira função. no caso null é igual ao this e 1 igual ao primeiro parãmetro enquanto o outro valor não foi defenido
 const somar1 = somar.bind(null, 1)
 
 console.log(somar(4, 5))
